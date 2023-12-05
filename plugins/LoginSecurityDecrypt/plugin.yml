@@ -1,0 +1,34 @@
+name: LoginSecurity
+version: 3.2.1
+main: com.lenis0012.bukkit.loginsecurity.LoginSecurity
+author: lenis0012
+description: 'The #1 Auth plugin'
+softdepend: [ProtocolLib]
+api-version: '1.13'
+commands:
+  login:
+    description: 서버-로그인
+    usage: /login <password>
+  register:
+    description: 환영합니다! 서버는 보안을 위하여 자체 회원가입 시스템을 운영하고 있습니다.
+    usage: /register <password>
+  changepassword:
+    description: 비밀번호-변경
+    aliases: [changepass]
+    usage: /changepass <old pass> <new pass>
+  logout:
+    description: 서버-로그아웃
+    usage: /logout
+  unregister:
+    description: 서버-회원탈퇴
+    usage: /unregister <current password>
+  lac:
+    description: LoginSecurity Admin command.
+    usage: /lac
+permissions:
+  ls.update:
+    description: Notify player of available updates
+    default: op
+  ls.bypass:
+    description: Bypass registration requirement
+    default: false
